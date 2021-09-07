@@ -5,8 +5,8 @@ const UserForm = ({submitForm}) => {
   const {handleChange, values, handleSubmit, errors} = useForm(submitForm, validateInfo);
 
   return (
-    <div className="Form_Container" onSubmit={handleSubmit}>
-      <form className="Form_User">
+    <div className="Form_Container" >
+      <form className="Form_User" onSubmit={handleSubmit}>
         <h2>Fill in to start</h2>
           <div className="Form_Input">
             <label 

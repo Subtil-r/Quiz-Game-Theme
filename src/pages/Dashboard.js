@@ -1,6 +1,8 @@
 import React, {useState} from 'react'
+import { useHistory } from 'react-router';
 
-const Dashboard = () => {
+
+const Dashboard = ({fLevel}) => {
 
   const [level,setLevel]=useState('');
   
@@ -9,9 +11,17 @@ const Dashboard = () => {
       setLevel( e.target.value);    
     }
   
+  const history = useHistory();
+
   const fetchQuiz = () => {
-    const chooseLevel = level;
-   console.log(chooseLevel)
+    if(level === ''){
+     console.log('choose')
+     history.push('/dashboard')
+    } else {
+      console.log(level)
+      fLevel(level)
+      history.push('/quiz')
+    }
   }
 
   return (
@@ -20,7 +30,7 @@ const Dashboard = () => {
       <p className="Dash_Text">Choose the difficult level and click on the button to start</p>
       <p className="Dash_Obs">(the prize changes accordingly to the difficult level choosed)</p>
 
-    <form className="Dash_Form">
+    <form className="Dash_Form" id="dash_level">
       <p >Please select your level:</p>
       <input type="radio" id="easy" name="level" value="easy" onChange={handleChange}/>
       <label htmlFor="easy">easy</label>
@@ -28,7 +38,7 @@ const Dashboard = () => {
       <label htmlFor="medium">medium</label>
       <input type="radio" id="hard" name="level" value="hard" onChange={handleChange}/>
       <label htmlFor="hard">hard</label>
-      <button type="submit" onClick={fetchQuiz}>start</button>
+      <button type="submit" form="dash_level" onClick={fetchQuiz}>start</button>
     </form>
 
     </div>
