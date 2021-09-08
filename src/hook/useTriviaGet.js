@@ -20,7 +20,7 @@ const useTrivia = (difLevel) => {
             .then(response => {
                 setRequest({
                     loading: false,
-                    data: response.data,
+                    data: response.data.results,
                     error: false
                 })
             })
