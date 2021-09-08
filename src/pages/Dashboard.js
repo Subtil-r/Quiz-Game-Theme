@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import { useHistory } from 'react-router';
 
 
+import { useEffect } from 'react';
+
 const Dashboard = ({fLevel}) => {
 
   const [level,setLevel]=useState('');
@@ -11,16 +13,26 @@ const Dashboard = ({fLevel}) => {
       setLevel( e.target.value);    
     }
   
+    
+
   const history = useHistory();
 
-  const fetchQuiz = () => {
+  const setTime = () => {
+      setTimeout(() => {
+        history.push('/quiz')
+      }, 400)
+    }
+  
+
+  const fetchQuiz = (e) => {
     if(level === ''){
      console.log('choose')
      history.push('/dashboard')
     } else {
+      e.preventDefault()
       console.log(level)
       fLevel(level)
-      history.push('/quiz')
+      setTime()
     }
   }
 

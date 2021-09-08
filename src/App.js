@@ -4,22 +4,26 @@ import Dashboard from './pages/Dashboard';
 import Quiz from './pages/Quiz';
 import Result from './pages/Result';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import useTrivia from './hook/useTriviaGet';
-import { useState } from 'react';
+//import useTrivia from './hook/useTriviaGet';
+//import { useHistory } from 'react-router';
+import { useState, useEffect } from 'react';
+import axios from 'axios';
 
 function App() {
 
-  const [getLevel, setGetLevel] = useState('');
+  const [questions, setQuestions] = useState();
+  const [show, setShow] = useState(false)
 
-  const fetchLevel = (level) => {
-    return setGetLevel(level);
-  }
+  const fetchQuestions = async (level) => {
+    const { data } = await axios.get(
+      `https://opentdb.com/api.php?amount=10&category=15&difficulty=${level}&type=multiple`);
 
-  const quizData = useTrivia(getLevel)
+    setQuestions(data.results);
+    
+  };
 
-  const quizResults = quizData.data
-
-  console.log('the quiz fetched from the trivia hook is:', quizResults)
+ 
+  console.log('as questoes vindas depois do dashboard', questions)
 
   return (
     <BrowserRouter>
@@ -27,8 +31,8 @@ function App() {
         <h1>App testing</h1>
         <Switch>
           <Route path='/' exact component={()=><Home/>} />
-          <Route path='/dashboard' component={()=><Dashboard fLevel={fetchLevel}/>} />
-          <Route path='/quiz' component={()=><Quiz quizRes={quizResults} />} />
+          <Route path='/dashboard' component={()=><Dashboard fLevel={fetchQuestions}/>} />
+          <Route path='/quiz' component={()=><Quiz quizRes={questions} />} />
           <Route path='/result' component={()=><Result/>} />
         </Switch>
       </div>
