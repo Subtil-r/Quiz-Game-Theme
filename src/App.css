@@ -1,0 +1,15 @@
+.select {
+  background-color: blue;
+}
+
+.wrong {
+  background-color: crimson;
+}
+
+.nextBtnVis {
+  visibility: visible;
+}
+
+.nextBtnFalse {
+  visibility: hidden;
+}

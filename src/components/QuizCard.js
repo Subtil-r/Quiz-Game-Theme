@@ -1,4 +1,48 @@
-const QuizCard = ({currQues, setCurrQues, quizRes, options}) => {
+import {useState} from 'react'
+import { useHistory } from 'react-router'
+
+
+const QuizCard = ({currQues, setCurrQues, quizRes, correct, options, setScore, resScore}) => {
+const [selected, setSelected] = useState();
+//const [error, setError] = useState(false);
+const [nextVis, setNextVis] = useState("nextBtnFalse")
+
+const history = useHistory();
+
+const handleCheck = (i) => {
+  setSelected(i)
+  if (i === correct) setScore(1)
+  setNextVis("nextBtnVis")
+  
+}
+const handleSelect = (i) => {
+  if (selected === i && selected === correct){
+    return "select";
+  } else if (selected === i && selected !== correct){
+    return "wrong";
+  }else if (i === correct){
+    return "select";
+  } 
+}
+
+
+const handleNext = () => {
+  if (currQues > 8){
+    history.push('/result')
+  } else if (selected){
+    setCurrQues(currQues + 1)
+    setSelected()
+    setNextVis("nextBtnFalse")
+  } else {
+    setNextVis("nextBtnFalse")
+  }
+}
+
+const handleQuit = () => {
+  history.push('/dashboard')
+  resScore(0)
+  setCurrQues(0)
+}
   return (
     <div>
       <h1>Question {currQues + 1}</h1>
@@ -7,11 +51,15 @@ const QuizCard = ({currQues, setCurrQues, quizRes, options}) => {
       {
         options &&
         options.map((i) => (
-              <button>
+              <button className={`singleOption ${selected && handleSelect (i)}`} onClick={()=>handleCheck(i)} key={i} disabled={selected}>
                 {i}
               </button>
             ))
       }
+      </div>
+      <div className="quizcard_controls">
+        <button onClick={handleQuit}>quit</button>
+        <button onClick={handleNext} className={nextVis}>next</button>
       </div>
     </div>
   )

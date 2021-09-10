@@ -20,7 +20,7 @@ const Dashboard = ({fLevel}) => {
   const setTime = () => {
       setTimeout(() => {
         history.push('/quiz')
-      }, 400)
+      }, 500)
     }
   
 
