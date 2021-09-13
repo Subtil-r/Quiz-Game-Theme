@@ -44,7 +44,7 @@ function App() {
           <Route path='/' exact component={()=><Home/>} />
           <Route path='/dashboard' component={()=><Dashboard fLevel={fetchLevel}/>} />
           <Route path='/quiz' component={()=><Quiz quizRes={quizResults} score={score} scoreState={scoreState} resScore={resetScore} currQues={currQues} quesNum={quesNum}/>} />
-          <Route path='/result' component={()=><Result/>} />
+          <Route path='/result' component={()=><Result level={getLevel} score={score}/>} />
         </Switch>
       </div>
     </BrowserRouter>
