@@ -11,11 +11,13 @@ const history = useHistory();
 
 const handleCheck = (i) => {
   setSelected(i)
-  if (i === correct) setScore(1)
+  console.log('a funcao do handlecheck', handleCheck)
   setNextVis("nextBtnVis")
+  console.log("quando clico pro check", currQues)
   
 }
 const handleSelect = (i) => {
+  console.log('a funcao do handleselect')
   if (selected === i && selected === correct){
     return "select";
   } else if (selected === i && selected !== correct){
@@ -27,17 +29,23 @@ const handleSelect = (i) => {
 
 
 const handleNext = () => {
+  console.log('a funcao do next', handleNext)
   if (currQues > 8){
     history.push('/result')
+    console.log("quando na primeira condição", currQues)
   } else if (selected){
-    setCurrQues(currQues + 1)
+    setCurrQues(1)
     setSelected()
+    if (selected === correct) setScore(1)
     setNextVis("nextBtnFalse")
+    console.log("quando clico no next", currQues)
   } else {
     setNextVis("nextBtnFalse")
+    console.log("quandona ultima condição next", currQues)
+
   }
 }
-
+console.log('quizcard.js - currques +', currQues)
 const handleQuit = () => {
   history.push('/dashboard')
   resScore(0)

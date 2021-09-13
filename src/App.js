@@ -11,6 +11,8 @@ function App() {
 
   const [getLevel, setGetLevel] = useState('');
   const [score, setScore] = useState(0)
+  const [currQues, setCurrQues] = useState(0);
+  
 
   const fetchLevel = (level) => {
     return setGetLevel(level);
@@ -21,6 +23,10 @@ function App() {
   const quizResults = quizData.data
 
   console.log('the quiz fetched from the trivia hook is:', quizResults)
+
+  const quesNum = (num) => {
+    setCurrQues(currQues + num)
+  }
 
   const scoreState = (num) => {
     setScore(score + num)
@@ -37,7 +43,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={()=><Home/>} />
           <Route path='/dashboard' component={()=><Dashboard fLevel={fetchLevel}/>} />
-          <Route path='/quiz' component={()=><Quiz quizRes={quizResults} score={score} scoreNow={scoreState} resScore={resetScore}/>} />
+          <Route path='/quiz' component={()=><Quiz quizRes={quizResults} score={score} scoreState={scoreState} resScore={resetScore} currQues={currQues} quesNum={quesNum}/>} />
           <Route path='/result' component={()=><Result/>} />
         </Switch>
       </div>
