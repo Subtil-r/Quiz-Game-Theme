@@ -1,6 +1,6 @@
 import { useHistory } from "react-router"
 
-const Result = ({level, score}) => {
+const Result = ({level, score, resetScore, resQuesNum, userData}) => {
 
   const calcDiscount = () => {
     if (level === 'easy'){
@@ -40,17 +40,23 @@ const Result = ({level, score}) => {
           return '85%'
         }
   }
-}git add .
+}
 
   const history = useHistory()
 
+  const backHome = () => {
+    resetScore(0)
+    resQuesNum(0)
+    history.push('/dashboard')
+  }
+  
   return (
     <div>
       <h1>And i'm the results</h1>
       <h2>Your end score is: {score} in {level} level</h2>
       <h3>Your discount is: {calcDiscount()}</h3>
-      <p>We are sending your discount cupon to the email provided: </p>
-      <button className="home_button" onClick={()=> history.push('/dashboard')}>Home</button>
+      <p>We are sending your discount cupon to the email provided: {userData} </p>
+      <button className="home_button" onClick={backHome}>Home</button>
     </div>
   )
 }

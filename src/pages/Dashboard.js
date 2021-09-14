@@ -4,7 +4,7 @@ import { useHistory } from 'react-router';
 
 import { useEffect } from 'react';
 
-const Dashboard = ({fLevel}) => {
+const Dashboard = ({fLevel, userData}) => {
 
   const [level,setLevel]=useState('');
   
@@ -38,7 +38,7 @@ const Dashboard = ({fLevel}) => {
 
   return (
     <div className="Dash_Container">
-      <h1 className="Dash_Title">Welcome, UserName!</h1>
+      <h1 className="Dash_Title">Welcome, {userData}!</h1>
       <p className="Dash_Text">Choose the difficult level and click on the button to start</p>
       <p className="Dash_Obs">(the prize changes accordingly to the difficult level choosed)</p>
 

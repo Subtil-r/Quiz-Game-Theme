@@ -1,6 +1,6 @@
 import  { useState, useEffect } from "react"
 
-const useForm = (callback, validateInfo) => {
+const useForm = (callback, validateInfo, userData) => {
   const [values, setValues] = useState({
     username: '',
     email: ''
@@ -26,6 +26,8 @@ const useForm = (callback, validateInfo) => {
     () => {
       if (Object.keys(errors).length === 0 && isSubmitting) {
         callback();
+        userData(values)
+
       }
     },
     [errors]

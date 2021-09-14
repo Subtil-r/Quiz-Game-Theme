@@ -1,12 +1,12 @@
 import useForm from '../hook/useForm'
 import validateInfo from './validateInfo';
 
-const UserForm = ({submitForm}) => {
-  const {handleChange, values, handleSubmit, errors} = useForm(submitForm, validateInfo);
+const UserForm = ({submitForm, userData}) => {
+  const {handleChange, values, handleSubmit, errors} = useForm(submitForm, validateInfo, userData);
 
   return (
     <div className="Form_Container" >
-      <form className="Form_User" onSubmit={handleSubmit}>
+      <form className="Form_User" onSubmit={handleSubmit} id="formUser">
         <h2>Fill in to start</h2>
           <div className="Form_Input">
             <label 
@@ -44,7 +44,7 @@ const UserForm = ({submitForm}) => {
             />
             {errors.email && <p className="Form_Error">{errors.email}</p>}
           </div>
-        <button type="submit" className="Form_Submit">enter</button>
+        <button form="formUser" type="submit" className="Form_Submit" >enter</button>
       </form>
     </div>
   )
