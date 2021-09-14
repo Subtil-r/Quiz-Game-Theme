@@ -49,8 +49,7 @@ function App() {
   
   return (
     <BrowserRouter>
-      <div className="App">
-        <h1>App testing</h1>
+      <div className="app_container">
         <Switch>
           <Route path='/' exact component={()=><Home userData={getUserData}/>} />
           <Route path='/dashboard' component={()=><Dashboard fLevel={fetchLevel} userData={userData.username}/>} />

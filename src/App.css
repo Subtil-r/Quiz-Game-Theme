@@ -1,15 +1,18 @@
-.select {
-  background-color: blue;
-}
+/* Error: Undefined variable.
+ *   ,
+ * 8 |   box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.9);
+ *   |                                     ^^^^^^
+ *   '
+ *   stylesheets\pages\_home.scss 8:37  @import
+ *   stylesheets\App.scss 29:3          root stylesheet */
 
-.wrong {
-  background-color: crimson;
-}
-
-.nextBtnVis {
-  visibility: visible;
-}
-
-.nextBtnFalse {
-  visibility: hidden;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined variable.\a   \2577 \a 8 \2502    box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.9);\a   \2502                                      ^^^^^^\a   \2575 \a   stylesheets\\pages\\_home.scss 8:37  @import\a   stylesheets\\App.scss 29:3          root stylesheet";
 }

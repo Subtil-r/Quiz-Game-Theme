@@ -20,7 +20,7 @@ const UserForm = ({submitForm, userData}) => {
             id="username" 
             name="username" 
             className="Form_UserName" 
-            placeholder="Write your name here..."
+            /* placeholder="Write your name here..." */
             value={values.username}
             onChange={handleChange}
             />
@@ -38,7 +38,7 @@ const UserForm = ({submitForm, userData}) => {
             id="email" 
             name="email" 
             className="Form_UserEmail" 
-            placeholder="Write your e-mail here..."
+            /* placeholder="E-mail" */
             value={values.email}
             onChange={handleChange}
             />
