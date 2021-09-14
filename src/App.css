@@ -1,18 +1,108 @@
-/* Error: Undefined variable.
- *   ,
- * 8 |   box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.9);
- *   |                                     ^^^^^^
- *   '
- *   stylesheets\pages\_home.scss 8:37  @import
- *   stylesheets\App.scss 29:3          root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Undefined variable.\a   \2577 \a 8 \2502    box-shadow: 0 0 25px rgba($color: $black, $alpha: 0.9);\a   \2502                                      ^^^^^^\a   \2575 \a   stylesheets\\pages\\_home.scss 8:37  @import\a   stylesheets\\App.scss 29:3          root stylesheet";
+/**
+ * Set up a decent box model on the root element
+ */
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@300;400;500;700;900&display=swap");
+html {
+  box-sizing: border-box;
 }
+
+/**
+ * Make all elements from the DOM inherit from the parent box-sizing
+ * Since `*` has a specificity of 0, it does not override the `html` value
+ * making all elements inheriting from the root box-sizing value
+ * See: https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/**
+ * Basic styles for links
+ */
+a {
+  text-decoration: none;
+}
+
+/**
+ * Basic typography style for copy text
+ */
+/*  font-family: 'Source Code Pro', monospace; */
+.Form_Container {
+  position: relative;
+}
+
+.Form_Input {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.Form_Input:focus-within label {
+  transform: translate(0, 0px) scale(0.8);
+  color: #EDEDED;
+}
+
+.Form_Label {
+  position: absolute;
+  pointer-events: none;
+  transform: translate(0, 22px) scale(1);
+  transform-origin: top left;
+  transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  color: #6f81a5;
+  font-size: 1rem;
+  line-height: 1;
+  left: 1.5rem;
+}
+
+input {
+  margin: 15px;
+  height: 2rem;
+}
+
+.app_container {
+  height: 100vh;
+  border: solid 5px black;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/557/520/original/old-video-game-vector.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+.home_container {
+  /* border: solid 3px white; */
+  position: relative;
+  background-color: rgba(237, 237, 237, 0.5);
+  box-shadow: 0 0 25px rgba(39, 47, 50, 0.9);
+  margin: 5vh 5vh;
+  height: 80vh;
+}
+.home_container:before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  bottom: -20px;
+  left: -20px;
+  right: -20px;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/000/557/520/original/old-video-game-vector.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  filter: blur(5px);
+}
+.home_container h1 {
+  position: relative;
+  color: red;
+}
+.home_container p {
+  position: relative;
+  color: #EDEDED;
+}
+
+/*# sourceMappingURL=App.css.map */
