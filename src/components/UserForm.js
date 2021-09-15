@@ -7,11 +7,11 @@ const UserForm = ({submitForm, userData}) => {
   return (
     <div className="Form_Container" >
       <form className="Form_User" onSubmit={handleSubmit} id="formUser">
-        <h2>Fill in to start</h2>
+        <h2 className="Form_Title">Fill in to begin</h2>
           <div className="Form_Input">
             <label 
             htmlFor="username" 
-            className="Form_Label"
+            className={`Form_Label ${ values.username && 'filled' }`}
             >
               Name
             </label>
@@ -29,7 +29,7 @@ const UserForm = ({submitForm, userData}) => {
           <div className="Form_Input">
             <label 
             htmlFor="email" 
-            className="Form_Label"
+            className="Form_Label {values && 'filled'}"
             >
             E-mail
             </label>

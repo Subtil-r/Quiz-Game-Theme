@@ -2,14 +2,17 @@
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
 .home_container{
-  /* border: solid 3px white; */
+  border: solid 3px white;
+  text-align: center;
+  font-family: $font;
   position: relative;
   background-color: rgba($color: $white, $alpha: 0.5);
   box-shadow: 0 0 25px rgba($color: $gray, $alpha: 0.9);
-  margin: 5vh 5vh;
-  height: 80vh;
+  margin: 7.5vh 5vh;
+  height: 85vh;
    &:before{
     content: '';
+    border: solid 1px white;
     position: absolute;
     top: -20px;
     bottom: -20px;
@@ -21,11 +24,26 @@
     background-attachment: fixed;
     filter:blur(5px)
   } 
-  h1{
+  .Home_Fig{
+    /* border: solid 3px white; */
     position: relative;
-    color: red;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    overflow: hidden;
+    
+    
   }
-  p{
+  .Home_Logo{
+    position: absolute;
+    border: solid 3px blue;
+    top: -40px;
+    left: -30px;
+    
+  }
+  .Home_Text{
+    @include weight(bold);
+    font-size: 0.9rem;
     position: relative;
     color: $white;
   }

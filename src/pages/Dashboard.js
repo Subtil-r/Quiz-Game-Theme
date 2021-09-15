@@ -1,8 +1,7 @@
 import React, {useState} from 'react'
 import { useHistory } from 'react-router';
+import logo from '../img/quizred.png'
 
-
-import { useEffect } from 'react';
 
 const Dashboard = ({fLevel, userData}) => {
 
@@ -38,19 +37,31 @@ const Dashboard = ({fLevel, userData}) => {
 
   return (
     <div className="Dash_Container">
-      <h1 className="Dash_Title">Welcome, {userData}!</h1>
+      <h1 className="Dash_Title">Welcome</h1> 
+      <span className="Dash_UserName">{userData}</span>
       <p className="Dash_Text">Choose the difficult level and click on the button to start</p>
-      <p className="Dash_Obs">(the prize changes accordingly to the difficult level choosed)</p>
+      <figure className="Dash_Fig">
+        <img className="Dash_Logo" src={logo}  alt="quiz game logo" />
+      </figure>
+      <p className="Dash_Obs">the prize changes accordingly to the difficult level choosed</p>
 
     <form className="Dash_Form" id="dash_level">
-      <p >Please select your level:</p>
-      <input type="radio" id="easy" name="level" value="easy" onChange={handleChange}/>
-      <label htmlFor="easy">easy</label>
-      <input type="radio" id="medium" name="level" value="medium" onChange={handleChange}/>
-      <label htmlFor="medium">medium</label>
-      <input type="radio" id="hard" name="level" value="hard" onChange={handleChange}/>
-      <label htmlFor="hard">hard</label>
-      <button type="submit" form="dash_level" onClick={fetchQuiz}>start</button>
+      <fieldset>
+        <legend>Please select your level</legend>
+        <div className="Dash_Opt">
+          <input type="radio" id="easy" name="level" value="easy" onChange={handleChange} className="radio"/>
+          <label htmlFor="easy">easy</label>
+        </div>
+        <div className="Dash_Opt">
+          <input type="radio" id="medium" name="level" value="medium" onChange={handleChange} className="radio"/>
+          <label htmlFor="medium">medium</label>
+        </div>
+        <div className="Dash_Opt">
+          <input type="radio" id="hard" name="level" value="hard" onChange={handleChange} className="radio"/>
+          <label htmlFor="hard">hard</label>
+        </div>
+      </fieldset>
+        <button type="submit" form="dash_level" className="Dash_Submit" onClick={fetchQuiz}>start</button>
     </form>
 
     </div>

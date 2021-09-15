@@ -1,5 +1,8 @@
 .Form_Container {
   position: relative;
+  width: 100%;
+  text-align: center;
+  font-family: $font;
 }
 
 .Form_Input {
@@ -11,25 +14,57 @@
 .Form_Input:focus-within label {
   transform: translate(0, 0px) scale(0.8);
   color: #EDEDED;
+}
 
+.filled {
+  transform: translate(0, 0px) scale(0.8);
+}
+
+.Form_Title {
+  margin: 0;
+  font-size: 1.25rem;
+  color: $yellow;
+  text-transform: uppercase;
 }
 
 .Form_Label {
 	position: absolute;
   pointer-events: none;
-  transform: translate(0, 22px) scale(1);
+  transform: translate(0, 28px) scale(1);
   transform-origin: top left;
   transition: 200ms cubic-bezier(0, 0, 0.2, 1) 0ms;
-  color: #6f81a5;
+  color: $blue;
   font-size: 1rem;
   line-height: 1;
-  left: 1.5rem;
+  left: 2rem;
 }
 
-input {
+.Form_UserName, .Form_UserEmail {
   margin: 15px;
-  height: 2rem;
+  padding: 0 15px;
+  height: 2.5rem;
+  outline: none;
+  background-color: $white;
+  border: 5px solid $yellow;
+  border-radius: $radius;
+  color: $gray;
+  @include weight(xblack);
+  &:focus {
+    color: $blue;
+    @include weight(regular);
+  }
 }
 
+.Form_Error {
+  background-color: rgba($color: $red, $alpha: 0.2);
+  border: 1px solid $red;
+  color: $red;
+  width: 65%;
+  margin: 0 auto;
+  text-transform: uppercase;
+  @include weight(xblack);
+  font-size: 0.8rem;
+  
+}
 
 

@@ -32,3 +32,14 @@
   }
 }
 
+//********************mixins*******************//
+$fontweight: (
+  light: 300,
+  regular: 400,
+  bold: 500,
+  xblack: 700,
+);
+
+@mixin weight($weight){
+  font-weight: map-get($fontweight, $weight);
+};
