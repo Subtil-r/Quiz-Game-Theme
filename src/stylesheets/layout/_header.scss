@@ -1,3 +1,41 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+.Header_Container {
+  /* border: 3px solid $yellow;  */
+  margin: -30px -30px 30px -30px;
+  .Header_El {
+    /* border: 3px solid $red; */
+    width: 100%;
+    padding: 0 16vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18vw;
+  }
+  .Header_Fig{
+    /* border: solid 3px white; */ 
+    position: relative;
+    display: inline-block;
+    margin: 0 auto;
+    width: 80px;
+    height: 80px;
+    overflow: hidden; 
+  }
+  .Header_Logo{
+    /* border: solid 3px blue; */
+    position: absolute;
+    width: 125%;
+    top: -15px;
+    left: -10px;
+  }
+  .Header_Score {
+    color: $white;
+    border: 3px solid $white;
+    border-radius: 50%;
+    padding: 10px 18px;
+  }
+  hr {
+    margin: 2vw 5vw;
+  }
+}

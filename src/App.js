@@ -53,7 +53,7 @@ function App() {
         <Switch>
           <Route path='/' exact component={()=><Home userData={getUserData}/>} />
           <Route path='/dashboard' component={()=><Dashboard fLevel={fetchLevel} userData={userData.username}/>} />
-          <Route path='/quiz' component={()=><Quiz quizRes={quizResults} score={score} scoreState={scoreState} resScore={resetScore} currQues={currQues} quesNum={quesNum} resQuesNum={resQuesNum}/>} />
+          <Route path='/quiz' component={()=><Quiz quizRes={quizResults} score={score} scoreState={scoreState} resScore={resetScore} currQues={currQues} quesNum={quesNum} resQuesNum={resQuesNum} userData={userData.username}/>} />
           <Route path='/result' component={()=><Result level={getLevel} score={score}  resQuesNum={resQuesNum} resetScore={resetScore} userData={userData.email}/>} />
         </Switch>
       </div>

@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Header from "../components/Header";
 import QuizCard from "../components/QuizCard";
 
-const Quiz = ({ quizRes, score, scoreState, resScore, currQues, quesNum, resQuesNum }) => {
+const Quiz = ({ quizRes, score, scoreState, resScore, currQues, quesNum, resQuesNum, userData }) => {
   const [options, setOptions] = useState();
 
   useEffect(() => {
@@ -23,9 +23,8 @@ const Quiz = ({ quizRes, score, scoreState, resScore, currQues, quesNum, resQues
   };
 
   return (
-    <div>
-      <h1>I'm the quiz</h1>
-      <Header score={score} />
+    <div className="Quiz_Container">
+      <Header score={score} userData={userData} />
       <QuizCard
         currQues={currQues}
         resQuesNum={resQuesNum}

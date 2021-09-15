@@ -36,6 +36,61 @@ a {
  * Basic typography style for copy text
  */
 /*   */
+.Header_Container {
+  /* border: 3px solid $yellow;  */
+  margin: -30px -30px 30px -30px;
+}
+.Header_Container .Header_El {
+  /* border: 3px solid $red; */
+  width: 100%;
+  padding: 0 16vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18vw;
+}
+.Header_Container .Header_Fig {
+  /* border: solid 3px white; */
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+  width: 80px;
+  height: 80px;
+  overflow: hidden;
+}
+.Header_Container .Header_Logo {
+  /* border: solid 3px blue; */
+  position: absolute;
+  width: 125%;
+  top: -15px;
+  left: -10px;
+}
+.Header_Container .Header_Score {
+  color: #EDEDED;
+  border: 3px solid #EDEDED;
+  border-radius: 50%;
+  padding: 10px 18px;
+}
+.Header_Container hr {
+  margin: 2vw 5vw;
+}
+
+.nextBtnVis {
+  visibility: visible;
+}
+
+.nextBtnFalse {
+  visibility: hidden;
+}
+
+.select {
+  background-color: blue;
+}
+
+.wrong {
+  background-color: crimson;
+}
+
 .Form_Submit {
   margin: 15px;
   padding: 0 15px;
@@ -106,7 +161,7 @@ a {
 
 .Dash_Submit:after {
   content: "";
-  background: #298EE6;
+  background: #FEC015;
   display: block;
   position: absolute;
   padding-top: 300%;
@@ -393,6 +448,15 @@ a {
 }
 .Dash_Container .Dash_Form input[type=radio].radio::after {
   border-radius: 50%;
+}
+
+.Quiz_Container {
+  text-align: center;
+  font-family: "Source Code Pro", monospace;
+  position: relative;
+  background-color: rgba(39, 47, 50, 0.95);
+  padding: 5vh 5vh;
+  height: 98.5vh;
 }
 
 /*# sourceMappingURL=App.css.map */
