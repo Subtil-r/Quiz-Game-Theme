@@ -49,7 +49,7 @@ const handleQuit = () => {
   return (
     <div className="quizcard_Container">
       <h1 className="quizcard_Number">Question {currQues + 1}</h1>
-      <div className="quizcard_QA animate__animated animate__zoomIn">
+      <div className="quizcard_QA animate__animated animate__zoomIn animate__faster">
         <h2 className="quizcard_Question">{ quizRes[currQues].question }</h2>
 
         <div className="quizcard_OptionGroup">
