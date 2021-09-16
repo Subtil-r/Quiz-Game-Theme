@@ -1,7 +1,62 @@
-.nextBtnVis { visibility: visible; }
+.nextBtnVis { 
+  visibility: visible; 
+}
 
-.nextBtnFalse { visibility: hidden; }
+.nextBtnFalse { 
+  visibility: hidden; 
+}
 
-.select { background-color: blue; }
+.rightans { 
+  background-color: $blue;
+  color: $white;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+}
 
-.wrong { background-color: crimson; }
+/* Push */
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.rightans:active {
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.wrongans { 
+  background-color: $red;
+}
+
+.quizcard_Option{
+  padding: 0 15px;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-variant: small-caps;
+  @include weight(xblack);
+}

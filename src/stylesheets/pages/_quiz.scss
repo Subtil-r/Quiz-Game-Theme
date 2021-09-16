@@ -6,3 +6,25 @@
   padding: 5vh 5vh;
   height: 98.5vh;
 }
+
+.quizcard_Number {
+  color: $yellow;
+  font-size: 1.75rem;
+}
+
+.quizcard_QA{
+  border-top: 3px solid $yellow;
+  border-bottom: 3px solid $yellow;
+}
+.quizcard_Question {
+  @include weight(regular);
+  font-size: 1.15rem;
+  color: $white;
+}
+
+.quizcard_OptionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
+}

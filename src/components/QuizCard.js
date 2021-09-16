@@ -15,11 +15,11 @@ const handleCheck = (i) => {
 
 const handleSelect = (i) => {
   if (selected === i && selected === correct){
-    return "select";
+    return "rightans";
   } else if (selected === i && selected !== correct){
-    return "wrong";
+    return "wrongans";
   }else if (i === correct){
-    return "select";
+    return "rightans";
   } 
 }
 
@@ -45,22 +45,25 @@ const handleQuit = () => {
 }
 
   return (
-    <div>
-      <h1>Question {currQues + 1}</h1>
-      <h2>{ quizRes[currQues].question }</h2>
-      <div className="quizcard_option">
-      {
-        options &&
-        options.map((i) => (
-              <button className={`singleOption ${selected && handleSelect (i)}`} onClick={()=>handleCheck(i)} key={i} disabled={selected}>
-                {i}
-              </button>
-            ))
-      }
+    <div className="quizcard_Container">
+      <h1 className="quizcard_Number">Question {currQues + 1}</h1>
+      <div className="quizcard_QA">
+        <h2 className="quizcard_Question">{ quizRes[currQues].question }</h2>
+
+        <div className="quizcard_OptionGroup">
+        {
+          options &&
+          options.map((i) => (
+                <button className={`quizcard_Option ${selected && handleSelect (i)}`} onClick={()=>handleCheck(i)} key={i} disabled={selected}>
+                  {i}
+                </button>
+              ))
+        }
+        </div>
       </div>
-      <div className="quizcard_controls">
-        <button onClick={handleQuit}>quit</button>
-        <button onClick={handleNext} className={nextVis}>next</button>
+      <div className="quizcard_Controls">
+        <button onClick={handleQuit} className="quizcard_Quit">quit</button>
+        <button onClick={handleNext} className={`quizcard_Next ${nextVis}`}>next</button>
       </div>
     </div>
   )

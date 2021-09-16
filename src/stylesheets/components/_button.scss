@@ -89,4 +89,35 @@
   transition: 0s
 }
 
+//*********************************Quiz Next Quit******************************************************//
 
+.quizcard_Quit {
+  margin: 10px;
+  padding: 0 15px;
+  height: 2rem;
+  outline: none;
+  background-color: $orange;
+  border: none;
+  border-radius: $radius;
+  color: $white;
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  
+}
+
+.quizcard_Next {
+  margin: 10px;
+  padding: 0 15px;
+  height: 2rem;
+  outline: none;
+  background-color: $green;
+  border: none;
+  border-radius: $radius;
+  color: $white;
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  @include weight(xblack);
+  
+}

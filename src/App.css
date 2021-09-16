@@ -38,7 +38,7 @@ a {
 /*   */
 .Header_Container {
   /* border: 3px solid $yellow;  */
-  margin: -30px -30px 30px -30px;
+  margin: -30px -30px 15px -30px;
 }
 .Header_Container .Header_El {
   /* border: 3px solid $red; */
@@ -83,12 +83,58 @@ a {
   visibility: hidden;
 }
 
-.select {
-  background-color: blue;
+.rightans {
+  background-color: #298EE6;
+  color: #EDEDED;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
 }
 
-.wrong {
-  background-color: crimson;
+/* Push */
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+.rightans:active {
+  -webkit-animation-name: hvr-push;
+  animation-name: hvr-push;
+  -webkit-animation-duration: 0.3s;
+  animation-duration: 0.3s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+}
+
+.wrongans {
+  background-color: #FC453D;
+}
+
+.quizcard_Option {
+  padding: 0 15px;
+  height: 2.5rem;
+  outline: none;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-variant: small-caps;
+  font-weight: 700;
 }
 
 .Form_Submit {
@@ -177,6 +223,35 @@ a {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+.quizcard_Quit {
+  margin: 10px;
+  padding: 0 15px;
+  height: 2rem;
+  outline: none;
+  background-color: #ff5e00;
+  border: none;
+  border-radius: 8px;
+  color: #EDEDED;
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+}
+
+.quizcard_Next {
+  margin: 10px;
+  padding: 0 15px;
+  height: 2rem;
+  outline: none;
+  background-color: #69D51F;
+  border: none;
+  border-radius: 8px;
+  color: #EDEDED;
+  font-variant: small-caps;
+  font-size: 1rem;
+  letter-spacing: 0.25rem;
+  font-weight: 700;
 }
 
 .Form_Container {
@@ -457,6 +532,29 @@ a {
   background-color: rgba(39, 47, 50, 0.95);
   padding: 5vh 5vh;
   height: 98.5vh;
+}
+
+.quizcard_Number {
+  color: #FEC015;
+  font-size: 1.75rem;
+}
+
+.quizcard_QA {
+  border-top: 3px solid #FEC015;
+  border-bottom: 3px solid #FEC015;
+}
+
+.quizcard_Question {
+  font-weight: 400;
+  font-size: 1.15rem;
+  color: #EDEDED;
+}
+
+.quizcard_OptionGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 25px;
 }
 
 /*# sourceMappingURL=App.css.map */
