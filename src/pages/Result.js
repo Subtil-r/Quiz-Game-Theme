@@ -51,12 +51,18 @@ const Result = ({level, score, resetScore, resQuesNum, userData}) => {
   }
   
   return (
-    <div>
-      <h1>And i'm the results</h1>
-      <h2>Your end score is: {score} in {level} level</h2>
-      <h3>Your discount is: {calcDiscount()}</h3>
-      <p>We are sending your discount cupon to the email provided: {userData} </p>
-      <button className="home_button" onClick={backHome}>Home</button>
+    <div className="Res_Container">
+      <h1 className="Res_Title">results</h1>
+      <h2 className="Res_Score">Your end score is</h2> 
+      <div className="Res_Group">
+        <span className="Res_Num">{score}</span> in <span className="Res_Level">{level}</span> level
+      </div>
+      <h3 className="Res_Disc">Your discount is:</h3> 
+      <div className="Res_DiscNum">
+        {calcDiscount()}
+      </div>
+      <p className="Res_Email">We are sending your discount cupon to the provided e-mail: <span className="Res_UserEmail">{userData}</span> </p>
+      <button className="Res_Button" onClick={backHome}>home</button>
     </div>
   )
 }

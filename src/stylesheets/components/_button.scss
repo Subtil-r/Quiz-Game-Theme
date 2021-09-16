@@ -121,3 +121,11 @@
   @include weight(xblack);
   
 }
+
+//*********************************Result Home******************************************************//
+
+.Res_Button{
+  @extend .Dash_Submit;
+  background-color: $orange;
+  color: $white;
+}

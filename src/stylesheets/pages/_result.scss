@@ -1,0 +1,58 @@
+.Res_Container {
+  text-align: center;
+  font-family: $font;
+  position: relative;
+  background-color: rgba($color: $white, $alpha: 0.8);
+  padding: 5vh 5vh;
+  height: 98.5vh;
+
+  .Res_Title {
+    width: 50%;
+    display: inline;
+    text-transform: uppercase;
+    font-size: 2.7rem;
+  }
+  .Res_Score {
+    text-transform: uppercase;
+    font-size: 1rem;
+  }
+
+  .Res_Group {
+    .Res_Num{
+      font-size: 2rem;
+      color: $blue;
+      @include weight(bold);
+    }
+    .Res_Level{
+      color: $blue;
+      @include weight(xblack);
+    }
+  }
+  .Res_DiscNum{
+    border: 6px solid $gray;
+    border-radius: 50%;
+    margin: 0 auto;
+    width: 150px;
+    height: 150px;
+    background-color: rgba($color: $gray, $alpha: 0.8);
+    color: $green;
+    padding: 27px 0;
+    font-size: 4rem;
+    @include weight(xblack);
+  }
+  .Res_Email {
+    @include weight(xblack);
+    font-size: 1.25rem;
+    margin: 35px 0 0;
+  }
+  .Res_UserEmail{
+    background-color: rgba($color: $blue, $alpha: 0.5);
+    padding: 5px 15px;
+    display: inline-block;
+    font-variant: small-caps;
+    letter-spacing: 0.15rem;
+    margin: 10px 0 0 0;
+    color: $white;
+    font-size: 1.25rem;
+  }
+}
