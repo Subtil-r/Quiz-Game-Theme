@@ -14,7 +14,7 @@ const Home = ({userData}) => {
   }
 
   return (
-    <div className="home_container">
+    <div className="home_container animate__animated animate__fadeIn">
       <figure className="Home_Fig">
         <img className="Home_Logo" src={logo}  alt="quiz game logo" />
       </figure>

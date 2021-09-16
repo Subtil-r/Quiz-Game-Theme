@@ -6,6 +6,7 @@ import Result from './pages/Result';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import useTrivia from './hook/useTriviaGet';
 import { useEffect, useState } from 'react';
+import "animate.css"
 
 function App() {
 

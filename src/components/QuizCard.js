@@ -2,6 +2,8 @@ import {useState} from 'react'
 import { useHistory } from 'react-router'
 
 
+
+
 const QuizCard = ({currQues, setCurrQues, resQuesNum, quizRes, correct, options, setScore, resScore}) => {
 const [selected, setSelected] = useState();
 const [nextVis, setNextVis] = useState("nextBtnFalse")
@@ -10,16 +12,16 @@ const history = useHistory();
 
 const handleCheck = (i) => {
   setSelected(i)
-  setNextVis("nextBtnVis")
+  setNextVis("nextBtnVis animate__bounceIn")
 }
 
 const handleSelect = (i) => {
   if (selected === i && selected === correct){
-    return "rightans";
+    return "animate__rubberBand rightans";
   } else if (selected === i && selected !== correct){
-    return "wrongans";
+    return "animate__shakeX wrongans";
   }else if (i === correct){
-    return "rightans";
+    return "animate__rubberBand rightans";
   } 
 }
 
@@ -47,14 +49,14 @@ const handleQuit = () => {
   return (
     <div className="quizcard_Container">
       <h1 className="quizcard_Number">Question {currQues + 1}</h1>
-      <div className="quizcard_QA">
+      <div className="quizcard_QA animate__animated animate__zoomIn">
         <h2 className="quizcard_Question">{ quizRes[currQues].question }</h2>
 
         <div className="quizcard_OptionGroup">
         {
           options &&
           options.map((i) => (
-                <button className={`quizcard_Option ${selected && handleSelect (i)}`} onClick={()=>handleCheck(i)} key={i} disabled={selected}>
+                <button className={`quizcard_Option animate__animated ${selected && handleSelect (i)}`} onClick={()=>handleCheck(i)} key={i} disabled={selected}>
                   {i}
                 </button>
               ))

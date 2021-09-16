@@ -23,7 +23,7 @@ const Quiz = ({ quizRes, score, scoreState, resScore, currQues, quesNum, resQues
   };
 
   return (
-    <div className="Quiz_Container">
+    <div className="Quiz_Container animate__animated animate__fadeIn">
       <Header score={score} userData={userData} />
       <QuizCard
         currQues={currQues}

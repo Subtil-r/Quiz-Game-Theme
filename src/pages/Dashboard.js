@@ -36,7 +36,7 @@ const Dashboard = ({fLevel, userData}) => {
   }
 
   return (
-    <div className="Dash_Container">
+    <div className="Dash_Container animate__animated animate__fadeIn">
       <h1 className="Dash_Title">Welcome</h1> 
       <span className="Dash_UserName">{userData}</span>
       <p className="Dash_Text">Choose the difficult level and click on the button to start</p>
