@@ -12,15 +12,22 @@
     justify-content: center;
     align-items: center;
     gap: 18vw;
+    @include respond-to(small){
+      justify-content: space-around;
+    }
   }
   .Header_Fig{
     /* border: solid 3px white; */ 
     position: relative;
     display: inline-block;
-    margin: 0 auto;
+    margin: 0;
     width: 80px;
     height: 80px;
     overflow: hidden; 
+    @include respond-to(small){
+      width: 125px;
+      height: 125px;
+    }
   }
   .Header_Logo{
     /* border: solid 3px blue; */
@@ -34,8 +41,17 @@
     border: 3px solid $white;
     border-radius: 50%;
     padding: 10px 18px;
+    @include respond-to(small){
+      border: 5px solid $white;
+      width: 80px;
+      height: 80px;
+      font-size: 2.25rem;
+    }
   }
   hr {
     margin: 2vw 5vw;
+    @include respond-to(small){
+      border: 2px solid $white;
+    }
   }
 }

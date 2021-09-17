@@ -5,23 +5,37 @@
   background-color: rgba($color: $white, $alpha: 0.8);
   padding: 5vh 5vh;
   height: 98.5vh;
+  @include respond-to(small){
+    padding: 5vh 10vh;
+    max-width: 768px;
+    margin: 0 auto;
+  }
 
   .Dash_Title {
     width: 50%;
     display: inline;
     font-size: 2.7rem;
+    @include respond-to(small){
+      font-size: 4rem;      
+    }
   }
   .Dash_UserName {
     display: block;
     color: $blue;
     font-size: 2rem;
     @include weight(xblack);
+    @include respond-to(small){
+      font-size: 3rem;      
+    }
   }
   .Dash_Text {
     @include weight(xblack);
     font-size: 1.25rem;
     margin: 35px 0 0;
-    
+    @include respond-to(small){
+      font-size: 2rem;
+      letter-spacing: 0.25rem;      
+    }
   }
 
   .Dash_Fig{
@@ -32,6 +46,11 @@
     width: 50px;
     height: 50px;
     overflow: hidden; 
+    @include respond-to(small){
+      margin: 1rem auto;
+      width: 100px;
+      height: 100px;
+    }
   }
   .Dash_Logo{
     position: absolute;
@@ -39,7 +58,11 @@
     width: 200%;
     top: -10px;
     left: -30px;
-    
+    @include respond-to(small){
+      width: 210%;
+      top: -30px;
+      left: -55px;
+    }
   }
   .Dash_Obs {
       @include weight(thin);
@@ -48,6 +71,11 @@
       color: $gray;
       font-variant: small-caps;
       font-size: 1rem;
+      @include respond-to(small){
+        margin: 0 0 3rem 0;
+        font-size: 1.5rem;
+        letter-spacing: 0.15rem;     
+      }
   }
   .Dash_Form {
     margin: 25px 0;
@@ -58,10 +86,16 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
+      @include respond-to(small){
+        border: 3px solid $blue; 
+      }
     }
     legend {
       @include weight(xblack);
       font-size: 1rem;
+      @include respond-to(small){
+        font-size: 1.5rem;
+      }
     }
     .Dash_Opt {
       margin: 0;
@@ -90,6 +124,9 @@
       font-size: 1.5rem;
       font-variant: small-caps;
       letter-spacing: 0.2rem;
+      @include respond-to(small){
+        font-size: 2.5rem;
+      }
     }
     input[type=radio] {
       -webkit-appearance: none;
@@ -114,6 +151,10 @@
       outline: none;
       position: relative;
       z-index: 1000;
+      @include respond-to(small){
+        height: 35px;
+        width: 35px;
+      }
     &:hover {
       background:  rgba($color: $green, $alpha: 0.5);
     }
@@ -130,6 +171,11 @@
       font-size: 27px;
       text-align: center;
       line-height: 25px;
+      @include respond-to(small){
+        height: 35px;
+        width: 35px;
+        font-size: 37px;
+      }
     }
     &:checked::after {
       -webkit-animation: click-wave 0.65s;

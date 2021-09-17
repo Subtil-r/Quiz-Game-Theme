@@ -23,6 +23,12 @@
   transition-duration: 0.4s;
   overflow: hidden;
   cursor: pointer;
+  @include respond-to(small){
+    height: 3.25rem;
+    margin: 35px 0 0 0;
+    font-size: 1.5rem;
+    width: 100%;
+  }
 }
 
 .Form_Submit:after {
@@ -67,6 +73,13 @@
   transition-duration: 0.4s;
   overflow: hidden;
   cursor: pointer;
+  @include respond-to(small){
+    height: 3.25rem;
+    margin: 35px 0 0 0;
+    font-size: 1.5rem;
+    width: 50%;
+    
+  }
 }
 
 .Dash_Submit:after {
@@ -92,9 +105,8 @@
 //*********************************Quiz Next Quit******************************************************//
 
 .quizcard_Quit {
-  margin: 10px;
-  padding: 0 15px;
   height: 2rem;
+  width: 100px;
   outline: none;
   background-color: $orange;
   border: none;
@@ -103,13 +115,18 @@
   font-variant: small-caps;
   font-size: 1rem;
   letter-spacing: 0.25rem;
+  @include respond-to(small){
+    padding: 0 25px;
+    height: 3rem;
+    width: 150px;
+    font-size: 1.5rem;
+  }
   
 }
 
 .quizcard_Next {
-  margin: 10px;
-  padding: 0 15px;
   height: 2rem;
+  width: 100px;
   outline: none;
   background-color: $green;
   border: none;
@@ -119,6 +136,12 @@
   font-size: 1rem;
   letter-spacing: 0.25rem;
   @include weight(xblack);
+  @include respond-to(small){
+    padding: 0 25px;
+    height: 3rem;
+    width: 150px;
+    font-size: 1.5rem;
+  }
   
 }
 

@@ -10,6 +10,10 @@
   box-shadow: 0 0 25px rgba($color: $gray, $alpha: 0.9);
   margin: 7.5vh 5vh;
   height: 85vh;
+  max-width: 540px;
+  @include respond-to(small){
+    margin: 7.5vh auto;
+  }
    &:before{
     content: '';
     border: solid 1px white;
@@ -31,7 +35,10 @@
     width: 150px;
     height: 150px;
     overflow: hidden;
-    
+    @include respond-to(small){
+      width: 200px;
+      height: 200px;
+    }
     
   }
   .Home_Logo{
@@ -39,6 +46,11 @@
     border: solid 3px blue;
     top: -40px;
     left: -30px;
+    @include respond-to(small){
+      border: 3px solid $white;
+      width: 130%;
+      
+    }
     
   }
   .Home_Text{
@@ -46,5 +58,11 @@
     font-size: 0.9rem;
     position: relative;
     color: $white;
+    @include respond-to(small){
+      width: 90%;
+      margin: 15px auto 45px auto;
+      font-size: 1.25rem;
+    }
+    
   }
 }

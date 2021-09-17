@@ -5,27 +5,49 @@
   background-color: rgba($color: $white, $alpha: 0.8);
   padding: 5vh 5vh;
   height: 98.5vh;
+  @include respond-to(small){
+    max-width: 768px;
+    margin: 0 auto;      
+  }
 
   .Res_Title {
     width: 50%;
     display: inline;
     text-transform: uppercase;
     font-size: 2.7rem;
+    @include respond-to(small){
+      font-size: 4rem;      
+    }
   }
   .Res_Score {
     text-transform: uppercase;
     font-size: 1rem;
+    @include respond-to(small){
+      font-size: 2rem;      
+    }
   }
 
   .Res_Group {
+    @include respond-to(small){
+      font-size: 2rem;      
+    }
     .Res_Num{
       font-size: 2rem;
       color: $blue;
       @include weight(bold);
+      @include respond-to(small){
+        font-size: 4rem;      
+      }
     }
     .Res_Level{
       color: $blue;
       @include weight(xblack);
+    }
+  }
+
+  .Res_Disc {
+    @include respond-to(small){
+      font-size: 2rem;      
     }
   }
   .Res_DiscNum{
@@ -39,11 +61,22 @@
     padding: 27px 0;
     font-size: 4rem;
     @include weight(xblack);
+    @include respond-to(small){
+      width: 200px;
+      height: 200px;
+      padding: 40px 0;
+      font-size: 5rem; 
+    }
   }
   .Res_Email {
     @include weight(xblack);
     font-size: 1.25rem;
     margin: 35px 0 0;
+    @include respond-to(small){
+      width: 75%;
+      margin: 50px auto;
+      font-size: 1.5rem; 
+    }
   }
   .Res_UserEmail{
     background-color: rgba($color: $blue, $alpha: 0.5);
@@ -54,5 +87,8 @@
     margin: 10px 0 0 0;
     color: $white;
     font-size: 1.25rem;
+    @include respond-to(small){
+      font-size: 1.75rem; 
+    }
   }
 }

@@ -49,14 +49,25 @@ a {
   align-items: center;
   gap: 18vw;
 }
+@media (min-width: 767px) {
+  .Header_Container .Header_El {
+    justify-content: space-around;
+  }
+}
 .Header_Container .Header_Fig {
   /* border: solid 3px white; */
   position: relative;
   display: inline-block;
-  margin: 0 auto;
+  margin: 0;
   width: 80px;
   height: 80px;
   overflow: hidden;
+}
+@media (min-width: 767px) {
+  .Header_Container .Header_Fig {
+    width: 125px;
+    height: 125px;
+  }
 }
 .Header_Container .Header_Logo {
   /* border: solid 3px blue; */
@@ -71,8 +82,21 @@ a {
   border-radius: 50%;
   padding: 10px 18px;
 }
+@media (min-width: 767px) {
+  .Header_Container .Header_Score {
+    border: 5px solid #EDEDED;
+    width: 80px;
+    height: 80px;
+    font-size: 2.25rem;
+  }
+}
 .Header_Container hr {
   margin: 2vw 5vw;
+}
+@media (min-width: 767px) {
+  .Header_Container hr {
+    border: 2px solid #EDEDED;
+  }
 }
 
 .nextBtnVis {
@@ -102,6 +126,12 @@ a {
   font-variant: small-caps;
   font-weight: 700;
 }
+@media (min-width: 767px) {
+  .quizcard_Option {
+    height: 3.5rem;
+    font-size: 1.5rem;
+  }
+}
 
 .Form_Submit {
   margin: 15px;
@@ -125,6 +155,14 @@ a {
   transition-duration: 0.4s;
   overflow: hidden;
   cursor: pointer;
+}
+@media (min-width: 767px) {
+  .Form_Submit {
+    height: 3.25rem;
+    margin: 35px 0 0 0;
+    font-size: 1.5rem;
+    width: 100%;
+  }
 }
 
 .Form_Submit:after {
@@ -170,6 +208,14 @@ a {
   overflow: hidden;
   cursor: pointer;
 }
+@media (min-width: 767px) {
+  .Dash_Submit, .Res_Button {
+    height: 3.25rem;
+    margin: 35px 0 0 0;
+    font-size: 1.5rem;
+    width: 50%;
+  }
+}
 
 .Dash_Submit:after, .Res_Button:after {
   content: "";
@@ -192,9 +238,8 @@ a {
 }
 
 .quizcard_Quit {
-  margin: 10px;
-  padding: 0 15px;
   height: 2rem;
+  width: 100px;
   outline: none;
   background-color: #ff5e00;
   border: none;
@@ -204,11 +249,18 @@ a {
   font-size: 1rem;
   letter-spacing: 0.25rem;
 }
+@media (min-width: 767px) {
+  .quizcard_Quit {
+    padding: 0 25px;
+    height: 3rem;
+    width: 150px;
+    font-size: 1.5rem;
+  }
+}
 
 .quizcard_Next {
-  margin: 10px;
-  padding: 0 15px;
   height: 2rem;
+  width: 100px;
   outline: none;
   background-color: #69D51F;
   border: none;
@@ -218,6 +270,14 @@ a {
   font-size: 1rem;
   letter-spacing: 0.25rem;
   font-weight: 700;
+}
+@media (min-width: 767px) {
+  .quizcard_Next {
+    padding: 0 25px;
+    height: 3rem;
+    width: 150px;
+    font-size: 1.5rem;
+  }
 }
 
 .Res_Button {
@@ -230,6 +290,12 @@ a {
   width: 100%;
   text-align: center;
   font-family: "Source Code Pro", monospace;
+}
+@media (min-width: 767px) {
+  .Form_Container {
+    width: 90%;
+    margin: 0 auto;
+  }
 }
 
 .Form_Input {
@@ -253,6 +319,11 @@ a {
   color: #FEC015;
   text-transform: uppercase;
 }
+@media (min-width: 767px) {
+  .Form_Title {
+    font-size: 1.5rem;
+  }
+}
 
 .Form_Label {
   position: absolute;
@@ -265,6 +336,12 @@ a {
   line-height: 1;
   left: 2rem;
 }
+@media (min-width: 767px) {
+  .Form_Label {
+    font-size: 1.5rem;
+    transform: translate(0, 3rem) scale(1);
+  }
+}
 
 .Form_UserName, .Form_UserEmail {
   margin: 15px;
@@ -276,6 +353,13 @@ a {
   border-radius: 8px;
   color: #272F32;
   font-weight: 700;
+}
+@media (min-width: 767px) {
+  .Form_UserName, .Form_UserEmail {
+    height: 3.25rem;
+    margin: 35px 0 0 0;
+    font-size: 1.5rem;
+  }
 }
 .Form_UserName:focus, .Form_UserEmail:focus {
   color: #298EE6;
@@ -291,6 +375,12 @@ a {
   text-transform: uppercase;
   font-weight: 700;
   font-size: 0.8rem;
+}
+@media (min-width: 767px) {
+  .Form_Error {
+    margin: 20px auto;
+    font-size: 1.25rem;
+  }
 }
 
 .app_container {
@@ -311,6 +401,12 @@ a {
   box-shadow: 0 0 25px rgba(39, 47, 50, 0.9);
   margin: 7.5vh 5vh;
   height: 85vh;
+  max-width: 540px;
+}
+@media (min-width: 767px) {
+  .home_container {
+    margin: 7.5vh auto;
+  }
 }
 .home_container:before {
   content: "";
@@ -334,17 +430,36 @@ a {
   height: 150px;
   overflow: hidden;
 }
+@media (min-width: 767px) {
+  .home_container .Home_Fig {
+    width: 200px;
+    height: 200px;
+  }
+}
 .home_container .Home_Logo {
   position: absolute;
   border: solid 3px blue;
   top: -40px;
   left: -30px;
 }
+@media (min-width: 767px) {
+  .home_container .Home_Logo {
+    border: 3px solid #EDEDED;
+    width: 130%;
+  }
+}
 .home_container .Home_Text {
   font-weight: 500;
   font-size: 0.9rem;
   position: relative;
   color: #EDEDED;
+}
+@media (min-width: 767px) {
+  .home_container .Home_Text {
+    width: 90%;
+    margin: 15px auto 45px auto;
+    font-size: 1.25rem;
+  }
 }
 
 .Dash_Container {
@@ -355,10 +470,22 @@ a {
   padding: 5vh 5vh;
   height: 98.5vh;
 }
+@media (min-width: 767px) {
+  .Dash_Container {
+    padding: 5vh 10vh;
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
 .Dash_Container .Dash_Title {
   width: 50%;
   display: inline;
   font-size: 2.7rem;
+}
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Title {
+    font-size: 4rem;
+  }
 }
 .Dash_Container .Dash_UserName {
   display: block;
@@ -366,10 +493,21 @@ a {
   font-size: 2rem;
   font-weight: 700;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_UserName {
+    font-size: 3rem;
+  }
+}
 .Dash_Container .Dash_Text {
   font-weight: 700;
   font-size: 1.25rem;
   margin: 35px 0 0;
+}
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Text {
+    font-size: 2rem;
+    letter-spacing: 0.25rem;
+  }
 }
 .Dash_Container .Dash_Fig {
   /* border: solid 3px white; */
@@ -380,6 +518,13 @@ a {
   height: 50px;
   overflow: hidden;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Fig {
+    margin: 1rem auto;
+    width: 100px;
+    height: 100px;
+  }
+}
 .Dash_Container .Dash_Logo {
   position: absolute;
   border: solid 3px blue;
@@ -387,12 +532,26 @@ a {
   top: -10px;
   left: -30px;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Logo {
+    width: 210%;
+    top: -30px;
+    left: -55px;
+  }
+}
 .Dash_Container .Dash_Obs {
   padding: 5px;
   background-color: rgba(105, 213, 31, 0.7);
   color: #272F32;
   font-variant: small-caps;
   font-size: 1rem;
+}
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Obs {
+    margin: 0 0 3rem 0;
+    font-size: 1.5rem;
+    letter-spacing: 0.15rem;
+  }
 }
 .Dash_Container .Dash_Form {
   margin: 25px 0;
@@ -405,9 +564,19 @@ a {
   justify-content: space-around;
   align-items: center;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Form fieldset {
+    border: 3px solid #298EE6;
+  }
+}
 .Dash_Container .Dash_Form legend {
   font-weight: 700;
   font-size: 1rem;
+}
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Form legend {
+    font-size: 1.5rem;
+  }
 }
 .Dash_Container .Dash_Form .Dash_Opt {
   margin: 0;
@@ -437,6 +606,11 @@ a {
   font-variant: small-caps;
   letter-spacing: 0.2rem;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Form label {
+    font-size: 2.5rem;
+  }
+}
 .Dash_Container .Dash_Form input[type=radio] {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -461,6 +635,12 @@ a {
   position: relative;
   z-index: 1000;
 }
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Form input[type=radio] {
+    height: 35px;
+    width: 35px;
+  }
+}
 .Dash_Container .Dash_Form input[type=radio]:hover {
   background: rgba(105, 213, 31, 0.5);
 }
@@ -477,6 +657,13 @@ a {
   font-size: 27px;
   text-align: center;
   line-height: 25px;
+}
+@media (min-width: 767px) {
+  .Dash_Container .Dash_Form input[type=radio]:checked::before {
+    height: 35px;
+    width: 35px;
+    font-size: 37px;
+  }
 }
 .Dash_Container .Dash_Form input[type=radio]:checked::after {
   -webkit-animation: click-wave 0.65s;
@@ -504,15 +691,31 @@ a {
   padding: 5vh 5vh;
   height: 98.5vh;
 }
+@media (min-width: 767px) {
+  .Quiz_Container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
 
 .quizcard_Number {
   color: #FEC015;
   font-size: 1.75rem;
 }
+@media (min-width: 767px) {
+  .quizcard_Number {
+    font-size: 2.5rem;
+  }
+}
 
 .quizcard_QA {
   border-top: 3px solid #FEC015;
   border-bottom: 3px solid #FEC015;
+}
+@media (min-width: 767px) {
+  .quizcard_QA {
+    padding: 2rem 2.5rem;
+  }
 }
 
 .quizcard_Question {
@@ -520,12 +723,37 @@ a {
   font-size: 1.15rem;
   color: #EDEDED;
 }
+@media (min-width: 767px) {
+  .quizcard_Question {
+    font-size: 1.75rem;
+  }
+}
 
 .quizcard_OptionGroup {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 25px;
+}
+@media (min-width: 767px) {
+  .quizcard_OptionGroup {
+    gap: 20px;
+    width: 85%;
+    margin: 55px auto 25px auto;
+  }
+}
+
+.quizcard_Controls {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+@media (min-width: 767px) {
+  .quizcard_Controls {
+    padding: 20px;
+    gap: 70px;
+  }
 }
 
 .Res_Container {
@@ -536,24 +764,55 @@ a {
   padding: 5vh 5vh;
   height: 98.5vh;
 }
+@media (min-width: 767px) {
+  .Res_Container {
+    max-width: 768px;
+    margin: 0 auto;
+  }
+}
 .Res_Container .Res_Title {
   width: 50%;
   display: inline;
   text-transform: uppercase;
   font-size: 2.7rem;
 }
+@media (min-width: 767px) {
+  .Res_Container .Res_Title {
+    font-size: 4rem;
+  }
+}
 .Res_Container .Res_Score {
   text-transform: uppercase;
   font-size: 1rem;
+}
+@media (min-width: 767px) {
+  .Res_Container .Res_Score {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 767px) {
+  .Res_Container .Res_Group {
+    font-size: 2rem;
+  }
 }
 .Res_Container .Res_Group .Res_Num {
   font-size: 2rem;
   color: #298EE6;
   font-weight: 500;
 }
+@media (min-width: 767px) {
+  .Res_Container .Res_Group .Res_Num {
+    font-size: 4rem;
+  }
+}
 .Res_Container .Res_Group .Res_Level {
   color: #298EE6;
   font-weight: 700;
+}
+@media (min-width: 767px) {
+  .Res_Container .Res_Disc {
+    font-size: 2rem;
+  }
 }
 .Res_Container .Res_DiscNum {
   border: 6px solid #272F32;
@@ -567,10 +826,25 @@ a {
   font-size: 4rem;
   font-weight: 700;
 }
+@media (min-width: 767px) {
+  .Res_Container .Res_DiscNum {
+    width: 200px;
+    height: 200px;
+    padding: 40px 0;
+    font-size: 5rem;
+  }
+}
 .Res_Container .Res_Email {
   font-weight: 700;
   font-size: 1.25rem;
   margin: 35px 0 0;
+}
+@media (min-width: 767px) {
+  .Res_Container .Res_Email {
+    width: 75%;
+    margin: 50px auto;
+    font-size: 1.5rem;
+  }
 }
 .Res_Container .Res_UserEmail {
   background-color: rgba(41, 142, 230, 0.5);
@@ -581,6 +855,11 @@ a {
   margin: 10px 0 0 0;
   color: #EDEDED;
   font-size: 1.25rem;
+}
+@media (min-width: 767px) {
+  .Res_Container .Res_UserEmail {
+    font-size: 1.75rem;
+  }
 }
 
 /*# sourceMappingURL=App.css.map */
