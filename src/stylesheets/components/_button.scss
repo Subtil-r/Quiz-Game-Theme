@@ -2,6 +2,27 @@
 // This file contains all styles related to the button component.
 // -----------------------------------------------------------------------------
 
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
 .Form_Submit {
   margin: 15px;
   padding: 0 15px;
@@ -29,6 +50,9 @@
     font-size: 1.5rem;
     width: 100%;
   }
+  @include respond-to(medium){
+    width: 50%;
+  }
 }
 
 .Form_Submit:after {
@@ -49,6 +73,19 @@
   margin: 0;
   opacity: 1;
   transition: 0s
+}
+
+.Form_Submit:hover, .Form_Submit:focus, .Form_Submit:active {
+  @include respond-to(medium){
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 }
 
 //*********************************Dash Submit******************************************************//
@@ -102,6 +139,19 @@
   transition: 0s
 }
 
+.Dash_Submit:hover, .Dash_Submit:focus, .Dash_Submit:active {
+  @include respond-to(medium){
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+}
+
 //*********************************Quiz Next Quit******************************************************//
 
 .quizcard_Quit {
@@ -121,8 +171,21 @@
     width: 150px;
     font-size: 1.5rem;
   }
-  
 }
+
+.quizcard_Quit:hover, .quizcard_Quit:focus, .quizcard_Quit:active {
+  @include respond-to(medium){
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+}
+
 
 .quizcard_Next {
   height: 2rem;
@@ -142,9 +205,20 @@
     width: 150px;
     font-size: 1.5rem;
   }
-  
 }
 
+.quizcard_Next:hover, .quizcard_Next:focus, .quizcard_Next:active {
+  @include respond-to(medium){
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+}
 //*********************************Result Home******************************************************//
 
 .Res_Button{

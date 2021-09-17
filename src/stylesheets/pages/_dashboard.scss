@@ -10,6 +10,10 @@
     max-width: 768px;
     margin: 0 auto;
   }
+  @include respond-to(medium){
+    max-width: 1000px;
+    padding: 5vh 20vh;
+  }
 
   .Dash_Title {
     width: 50%;

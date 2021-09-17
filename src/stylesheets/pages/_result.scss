@@ -9,6 +9,9 @@
     max-width: 768px;
     margin: 0 auto;      
   }
+  @include respond-to(medium){
+    max-width: 1000px;
+  }
 
   .Res_Title {
     width: 50%;

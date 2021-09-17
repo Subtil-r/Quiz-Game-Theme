@@ -55,7 +55,6 @@ a {
   }
 }
 .Header_Container .Header_Fig {
-  /* border: solid 3px white; */
   position: relative;
   display: inline-block;
   margin: 0;
@@ -67,6 +66,12 @@ a {
   .Header_Container .Header_Fig {
     width: 125px;
     height: 125px;
+  }
+}
+@media (min-width: 992px) {
+  .Header_Container .Header_Fig {
+    min-width: 125px;
+    min-height: 125px;
   }
 }
 .Header_Container .Header_Logo {
@@ -84,10 +89,18 @@ a {
 }
 @media (min-width: 767px) {
   .Header_Container .Header_Score {
-    border: 5px solid #EDEDED;
     width: 80px;
     height: 80px;
     font-size: 2.25rem;
+  }
+}
+@media (min-width: 992px) {
+  .Header_Container .Header_Score {
+    border: 5px solid #EDEDED;
+    min-width: 80px;
+    min-height: 80px;
+    font-size: 2.25rem;
+    margin-bottom: 0;
   }
 }
 .Header_Container hr {
@@ -132,7 +145,33 @@ a {
     font-size: 1.5rem;
   }
 }
+@media (min-width: 992px) {
+  .quizcard_Option {
+    flex-basis: 47.2%;
+    height: 4rem;
+  }
+}
 
+@-webkit-keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes hvr-push {
+  50% {
+    -webkit-transform: scale(0.8);
+    transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
 .Form_Submit {
   margin: 15px;
   padding: 0 15px;
@@ -164,6 +203,11 @@ a {
     width: 100%;
   }
 }
+@media (min-width: 992px) {
+  .Form_Submit {
+    width: 50%;
+  }
+}
 
 .Form_Submit:after {
   content: "";
@@ -183,6 +227,19 @@ a {
   margin: 0;
   opacity: 1;
   transition: 0s;
+}
+
+@media (min-width: 992px) {
+  .Form_Submit:hover, .Form_Submit:focus, .Form_Submit:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
 }
 
 .Dash_Submit, .Res_Button {
@@ -237,6 +294,19 @@ a {
   transition: 0s;
 }
 
+@media (min-width: 992px) {
+  .Dash_Submit:hover, .Res_Button:hover, .Dash_Submit:focus, .Res_Button:focus, .Dash_Submit:active, .Res_Button:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+  }
+}
+
 .quizcard_Quit {
   height: 2rem;
   width: 100px;
@@ -255,6 +325,19 @@ a {
     height: 3rem;
     width: 150px;
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .quizcard_Quit:hover, .quizcard_Quit:focus, .quizcard_Quit:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
   }
 }
 
@@ -277,6 +360,19 @@ a {
     height: 3rem;
     width: 150px;
     font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .quizcard_Next:hover, .quizcard_Next:focus, .quizcard_Next:active {
+    -webkit-animation-name: hvr-push;
+    animation-name: hvr-push;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
   }
 }
 
@@ -342,6 +438,11 @@ a {
     transform: translate(0, 3rem) scale(1);
   }
 }
+@media (min-width: 992px) {
+  .Form_Label {
+    margin-left: 115px;
+  }
+}
 
 .Form_UserName, .Form_UserEmail {
   margin: 15px;
@@ -359,6 +460,13 @@ a {
     height: 3.25rem;
     margin: 35px 0 0 0;
     font-size: 1.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .Form_UserName, .Form_UserEmail {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 .Form_UserName:focus, .Form_UserEmail:focus {
@@ -382,6 +490,12 @@ a {
     font-size: 1.25rem;
   }
 }
+@media (min-width: 992px) {
+  .Form_Error {
+    width: 50%;
+    margin: 10px auto;
+  }
+}
 
 .app_container {
   height: 100vh;
@@ -390,6 +504,11 @@ a {
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
+}
+@media (min-width: 992px) {
+  .app_container {
+    border-width: 7px;
+  }
 }
 
 .home_container {
@@ -406,6 +525,12 @@ a {
 @media (min-width: 767px) {
   .home_container {
     margin: 7.5vh auto;
+  }
+}
+@media (min-width: 992px) {
+  .home_container {
+    margin: 7.5vh auto;
+    max-width: 1000px;
   }
 }
 .home_container:before {
@@ -461,6 +586,13 @@ a {
     font-size: 1.25rem;
   }
 }
+@media (min-width: 992px) {
+  .home_container .Home_Text {
+    width: 70%;
+    margin: 15px auto 45px auto;
+    font-size: 1.5rem;
+  }
+}
 
 .Dash_Container {
   text-align: center;
@@ -475,6 +607,12 @@ a {
     padding: 5vh 10vh;
     max-width: 768px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .Dash_Container {
+    max-width: 1000px;
+    padding: 5vh 20vh;
   }
 }
 .Dash_Container .Dash_Title {
@@ -697,6 +835,11 @@ a {
     margin: 0 auto;
   }
 }
+@media (min-width: 992px) {
+  .Quiz_Container {
+    max-width: 1000px;
+  }
+}
 
 .quizcard_Number {
   color: #FEC015;
@@ -715,6 +858,12 @@ a {
 @media (min-width: 767px) {
   .quizcard_QA {
     padding: 2rem 2.5rem;
+  }
+}
+@media (min-width: 992px) {
+  .quizcard_QA {
+    width: 850px;
+    margin: 0 auto;
   }
 }
 
@@ -742,6 +891,16 @@ a {
     margin: 55px auto 25px auto;
   }
 }
+@media (min-width: 992px) {
+  .quizcard_OptionGroup {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+}
 
 .quizcard_Controls {
   padding: 10px;
@@ -752,6 +911,12 @@ a {
 @media (min-width: 767px) {
   .quizcard_Controls {
     padding: 20px;
+    gap: 70px;
+  }
+}
+@media (min-width: 992px) {
+  .quizcard_Controls {
+    padding: 50px;
     gap: 70px;
   }
 }
@@ -768,6 +933,11 @@ a {
   .Res_Container {
     max-width: 768px;
     margin: 0 auto;
+  }
+}
+@media (min-width: 992px) {
+  .Res_Container {
+    max-width: 1000px;
   }
 }
 .Res_Container .Res_Title {

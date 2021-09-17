@@ -16,8 +16,7 @@
       justify-content: space-around;
     }
   }
-  .Header_Fig{
-    /* border: solid 3px white; */ 
+  .Header_Fig{ 
     position: relative;
     display: inline-block;
     margin: 0;
@@ -27,6 +26,10 @@
     @include respond-to(small){
       width: 125px;
       height: 125px;
+    }
+    @include respond-to(medium){
+      min-width: 125px;
+      min-height: 125px;
     }
   }
   .Header_Logo{
@@ -42,10 +45,16 @@
     border-radius: 50%;
     padding: 10px 18px;
     @include respond-to(small){
-      border: 5px solid $white;
       width: 80px;
       height: 80px;
       font-size: 2.25rem;
+    }
+    @include respond-to(medium){
+      border: 5px solid $white;
+      min-width: 80px;
+      min-height: 80px;
+      font-size: 2.25rem;
+      margin-bottom: 0;
     }
   }
   hr {

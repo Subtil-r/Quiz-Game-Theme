@@ -14,7 +14,11 @@
   @include respond-to(small){
     margin: 7.5vh auto;
   }
-   &:before{
+  @include respond-to(medium){
+    margin: 7.5vh auto;
+    max-width: 1000px;
+  }
+  &:before{
     content: '';
     border: solid 1px white;
     position: absolute;
@@ -49,7 +53,6 @@
     @include respond-to(small){
       border: 3px solid $white;
       width: 130%;
-      
     }
     
   }
@@ -62,6 +65,11 @@
       width: 90%;
       margin: 15px auto 45px auto;
       font-size: 1.25rem;
+    }
+    @include respond-to(medium){
+      width: 70%;
+      margin: 15px auto 45px auto;
+      font-size: 1.5rem;
     }
     
   }

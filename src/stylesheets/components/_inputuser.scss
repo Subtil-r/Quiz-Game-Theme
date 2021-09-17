@@ -48,6 +48,9 @@
     font-size: 1.5rem;
     transform: translate(0, 3rem) scale(1);
   }
+  @include respond-to(medium){
+    margin-left: 115px;
+  }
 }
 
 .Form_UserName, .Form_UserEmail {
@@ -64,6 +67,11 @@
     height: 3.25rem;
     margin: 35px 0 0 0;
     font-size: 1.5rem;
+  }
+  @include respond-to(medium){
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
   }
   &:focus {
     color: $blue;
@@ -83,6 +91,10 @@
   @include respond-to(small){
     margin: 20px auto;
     font-size: 1.25rem;
+  }
+  @include respond-to(medium){
+    width: 50%;
+    margin: 10px auto;
   }
 }
 

@@ -30,4 +30,8 @@
     height: 3.5rem;
     font-size: 1.5rem;
   }
+  @include respond-to(medium){
+    flex-basis: 47.2%;
+    height: 4rem;
+  }
 }
